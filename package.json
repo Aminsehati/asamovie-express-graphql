@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "dev": "nodemon index.js "
   },
   "author": "",
@@ -17,7 +18,8 @@
     "express": "^4.17.2",
     "graphql": "^16.2.0",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^6.1.7"
+    "mongoose": "^6.1.7",
+    "vercel": "^23.1.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
