@@ -1,0 +1,36 @@
+const express = require('express');
+const {
+    ApolloServer
+} = require('apollo-server');
+const {
+    ApolloServerPluginLandingPageGraphQLPlayground
+} = require("apollo-server-core");
+const dotenv = require('dotenv')
+const app = express();
+const typeDefs = require('./types');
+const resolvers = require('./resolver');
+const models = require('./models');
+const databse = require('./config/database');
+
+databse();
+
+
+dotenv.config()
+
+const server = new ApolloServer({
+    typeDefs,
+    resolvers,
+    context: {
+        models
+    },
+    plugins: [
+        ApolloServerPluginLandingPageGraphQLPlayground(),
+    ],
+})
+server.listen({
+    port: 4000
+}).then(({
+    url
+}) => {
+    console.log(`🚀 Server ready at ${url}`);
+});
