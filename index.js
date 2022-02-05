@@ -34,6 +34,7 @@ const server = new ApolloServer({
         ApolloServerPluginLandingPageGraphQLPlayground(),
     ],
 })
+await server.start();
 server.listen({
     port: 4000
 }).then(({
