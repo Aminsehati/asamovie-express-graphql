@@ -8,6 +8,10 @@ const movieSchema = new Schema({
     imdb:{
         type:String,
         default:""
+    },
+    story:{
+        type:String,
+        required:true,
     }
 },{
     timestamps:true 

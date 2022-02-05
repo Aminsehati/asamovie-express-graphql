@@ -37,9 +37,6 @@ const server = new ApolloServer({
         ApolloServerPluginLandingPageGraphQLPlayground(),
     ],
 })
-const main = async ()=>{
-    await server.start();
-}
 server.listen({
     port: 4000
 }).then(({
@@ -48,4 +45,4 @@ server.listen({
     console.log(`🚀 Server ready at ${url}`);
 });
 
-module.exports = main
+module.exports = server.createHandler();
