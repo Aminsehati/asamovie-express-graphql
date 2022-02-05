@@ -20,8 +20,8 @@ module.exports = gql `
      name : String!
  }
  type Mutation {
-     createCountry(input :createCountryInput ) : Country,
-     updateCountry(id : ID! , input : updateCountryInput ) : Country ,
+     createCountry(input :createCountryInput! ) : Country,
+     updateCountry(id : ID! , input : updateCountryInput! ) : Country ,
      deleteCountry(id:ID!) : Country 
  }
  input getCountrySort {

@@ -5,14 +5,14 @@ const getCategories = async (_, {
     sort,
     pagination
 }, {
-    models
+    models,
 }) => {
     try {
         let sortItem = {
             ...sort
         }
         let paginationItem = {
-            limit: pagination?.limit || 5,
+            limit: pagination?.limit || 20,
             skip: pagination?.skip || 1
         }
         return await models.category.find().sort(sortItem).limit(paginationItem.limit).skip(paginationItem.skip - 1 );

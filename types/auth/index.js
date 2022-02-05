@@ -5,14 +5,11 @@ const {
 module.exports = gql `
  type Mutation {
      registerUser(input :registerUserInput! ) : Token , 
-     loginUser (input :loginUserInput! ):Token
+     loginUser (input :loginUserInput! ):Token,
+     updateUser(input : updaateUserInput! ):User
  }
- type User {
-     firstName:String ,
-     lastName:String,
-     phone:String,
-     password:String,
-     token:String
+ type Query {
+    getUserInfo : User
  }
  input registerUserInput {
      phone:String!,
@@ -22,7 +19,19 @@ module.exports = gql `
     phone:String!,
      password:String!,
  }
+ input updaateUserInput {
+     firstName : String!,
+     lastName : String ! ,
+     phone : String  ,
+     password : String  ,
+ }
  type Token {
     access_token:String!
+ }
+ type User {
+     firstName : String ,
+     lastName: String ,
+     phone : String ,
+     password:String
  }
 `

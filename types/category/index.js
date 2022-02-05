@@ -20,8 +20,8 @@ module.exports = gql `
         name : String !
     }
     type Mutation {
-        createCategory(input : createCategoryInput) : Category ,
-        updateCategory(id : ID! , input : updateCategoryInput ) : Category ,
+        createCategory(input : createCategoryInput!) : Category ,
+        updateCategory(id : ID! , input : updateCategoryInput! ) : Category ,
         deleteCategory(id : ID!) : Category
     }
     input getCategorySort {

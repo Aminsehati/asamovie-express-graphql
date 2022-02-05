@@ -20,8 +20,12 @@ dotenv.config()
 const server = new ApolloServer({
     typeDefs,
     resolvers,
-    context: {
-        models
+    context({req , next}) {
+        return {
+            models,
+            req,
+            next
+        }
     },
     plugins: [
         ApolloServerPluginLandingPageGraphQLPlayground(),
