@@ -45,4 +45,4 @@ server.listen({
     console.log(`🚀 Server ready at ${url}`);
 });
 
-module.exports = server.createHandler();
+module.exports = server
