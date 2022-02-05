@@ -5,7 +5,8 @@ const {
 const {
     ApolloServerPluginLandingPageGraphQLPlayground
 } = require("apollo-server-core");
-const dotenv = require('dotenv')
+const dotenv = require('dotenv');
+const cors = require('cors');
 const app = express();
 const typeDefs = require('./types');
 const resolvers = require('./resolver');
@@ -14,6 +15,8 @@ const databse = require('./config/database');
 
 databse();
 
+
+app.use(cors())
 
 dotenv.config()
 

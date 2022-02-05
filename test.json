@@ -7,7 +7,7 @@
     "fullDescription": "",
     "shortDescription": "",
     "type": "Movie",
-    "hit": 63,
+    "hit": 64,
     "publishDate": "20220130T043001270Z",
     "publishInFuture": false,
     "unknownDatePublish": false,
@@ -47,7 +47,7 @@
     "isMarketable": false,
     "onlineContentType": "None",
     "offlineContentType": "None",
-    "regions": ["Other"],
+    "regions": ["IR"],
     "casts": [
       {
         "castId": 8568,
