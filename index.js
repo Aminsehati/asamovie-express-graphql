@@ -23,7 +23,10 @@ dotenv.config()
 const server = new ApolloServer({
     typeDefs,
     resolvers,
-    context({req , next}) {
+    context({
+        req,
+        next
+    }) {
         return {
             models,
             req,
@@ -34,7 +37,9 @@ const server = new ApolloServer({
         ApolloServerPluginLandingPageGraphQLPlayground(),
     ],
 })
-await server.start();
+const main = async ()=>{
+    await server.start();
+}
 server.listen({
     port: 4000
 }).then(({
@@ -43,4 +48,4 @@ server.listen({
     console.log(`🚀 Server ready at ${url}`);
 });
 
-module.exports = app
+module.exports = main
