@@ -33,6 +33,7 @@ const server = new ApolloServer({
             next
         }
     },
+    introspection: true,
     plugins: [
         ApolloServerPluginLandingPageGraphQLPlayground(),
     ],

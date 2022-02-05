@@ -260,7 +260,7 @@
   "resolved" "https://registry.npmjs.org/@vercel/go/-/go-1.2.3.tgz"
   "version" "1.2.3"
 
-"@vercel/node@1.12.1":
+"@vercel/node@^1.12.1", "@vercel/node@1.12.1":
   "integrity" "sha512-NcawIY05BvVkWlsowaxF2hl/hJg475U8JvT2FnGykFPMx31q1/FtqyTw/awSrKfOSRXR0InrbEIDIelmS9NzPA=="
   "resolved" "https://registry.npmjs.org/@vercel/node/-/node-1.12.1.tgz"
   "version" "1.12.1"
